@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+    This is the XAML layout for the custom MyAwesomeCountdownControl.
+    It combines a circular progress ring with a digital-style time display (MM:SS).
+    
+    - The countdown ring is rendered using a GraphicsView.
+    - The central time display consists of three labels arranged horizontally:
+    [MinutesLabel] [ColonLabel] [SecondsLabel]
+-->
+
+<ContentView
+    x:Class="CountdownControlMaui.Controls.CountdownControl"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="Root">
+
+    <Grid>
+
+        <!--
+            The circular countdown ring is drawn here.
+            It uses a custom CountdownDrawable (set in code-behind) to visualize progress.
+        -->
+        <GraphicsView x:Name="ProgressRing" />
+
+        <!--
+            The time display is centered over the ring.
+            It contains:
+            - MinutesLabel (e.g., "01")
+            - ColonLabel (e.g., ":") — animates to blink
+            - SecondsLabel (e.g., "45")
+            All colors are bound to the TextColor BindableProperty for styling.
+        -->
+        <HorizontalStackLayout HorizontalOptions="Center" 
+                               VerticalOptions="Center">
+            <Label x:Name="MinutesLabel" 
+                   TextColor="{Binding TextColor, Source={x:Reference Root}}" />
+            <Label x:Name="ColonLabel"
+                   Text=":"
+                   TextColor="{Binding TextColor, Source={x:Reference Root}}" />
+            <Label x:Name="SecondsLabel" 
+                   TextColor="{Binding TextColor, Source={x:Reference Root}}" />
+        </HorizontalStackLayout>
+    </Grid>
+
+</ContentView>
