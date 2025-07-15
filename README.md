@@ -49,7 +49,8 @@ The control supports all major platforms: **Android**, **iOS**, **macOS Catalyst
 
 ## 📸 Screenshots
 
-Here’s how the `CountdownControl` looks on Windows:  
+Here’s how the `CountdownControl` looks on Windows:
+
 ![Windows](./docs/sample_windows.png)
 
 It also works seamlessly on Android, iOS, and Mac Catalyst with native rendering and animations.
