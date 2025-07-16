@@ -61,7 +61,7 @@ Want to learn more about the inner workings of the control, including how the ra
 
 👉 Read the full post on [Medium](https://www.medium.com/@tsjdevapps):
 
-- [⏳ Building an Animated Countdown Control in .NET MAUI](#)
+- [⏳ Building an Animated Countdown Control in .NET MAUI](https://medium.com/@tsjdevapps/building-an-animated-countdown-control-in-net-maui-0b1faff7ed76)
 
 ## 📃 License
 
